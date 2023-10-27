@@ -6,8 +6,7 @@ Negative numbers should return None
 """
 def fibonacci(position):
   if(position < 0):
-    raise ValueError("Invalid input")
-  elif(position == 1 or position == 2):
+    return None
+  if(position == 1 or position == 2):
     return 1
-  else:
-    return fibonacci(position - 1) + fibonacci(position - 2)
+  return fibonacci(position - 1) + fibonacci(position - 2)
